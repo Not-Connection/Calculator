@@ -3,6 +3,9 @@ part of '../_index.dart';
 class CalculatorDescript extends StatelessWidget {
   const CalculatorDescript({super.key});
 
+  CalculatorCtrl get ct => Ctrl.calculator;
+  CalculatorData get dt => Data.calculator.st;
+
   @override
   Widget build(BuildContext context) {
     final sizeWidth = MediaQuery.of(context).size.width;
@@ -23,16 +26,6 @@ class CalculatorDescript extends StatelessWidget {
             child: sizeWidth < 1000
                 ? const Row(
                     children: [
-                      // SizedBox(
-                      //   width: 50,
-                      //   height: 50,
-                      //   child: IconButton(
-                      //     onPressed: () {
-                      //       Scaffold.of(context).closeEndDrawer();
-                      //     },
-                      //     icon: const Icon(Icons.arrow_back_ios),
-                      //   ),
-                      // ),
                       Expanded(
                         child: SizedBox(
                           child: Center(
@@ -56,10 +49,8 @@ class CalculatorDescript extends StatelessWidget {
             child: SizedBox(
               child: ListView(
                 children: [
-                  const Text(
-                    '''
-KALKULATOR EKSPONEN DAN LOGARITMA BERBASIS WEB DAN APLIKASI MENGGUNAKAN FRAMEWORK FLUTTER\n
-Disusun Guna Melengkapi Tugas Mata Kuliah Kalkulus II\n Dosen Pengampu : Euis Nur Fitriani Dewi S.T., M.Kom.\n ''',
+                  Text(
+                    dt.textTitle,
                     textAlign: TextAlign.center,
                   ),
                   Container(
@@ -71,10 +62,8 @@ Disusun Guna Melengkapi Tugas Mata Kuliah Kalkulus II\n Dosen Pengampu : Euis Nu
                   const SizedBox(
                     height: 15,
                   ),
-                  const Text(
-                    '''
-Disusun oleh :\n Annisa Putri Wahyuni     	227006042\n Indah Robiatul A 		            227006059\n
-PROGRAM STUDI S1 INFORMATIKA\n FAKULTAS TEKNIK\n UNIVERSITAS SILIWANGI\n 2022''',
+                  Text(
+                    dt.textIdentity,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(
@@ -84,11 +73,10 @@ PROGRAM STUDI S1 INFORMATIKA\n FAKULTAS TEKNIK\n UNIVERSITAS SILIWANGI\n 2022'''
                     textAlign: TextAlign.justify,
                     text: TextSpan(
                       children: [
-                        const TextSpan(
-                          text:
-                              '''     "Sama seperti konsep matematika lainnya, dalam melakukan perhitungan eksponen & logaritma kita membutuhkan waktu dan latihan bahkan ketika kita kurang teliti maka akan timbul kesalahan (human error). Disini kami telah mengembangkan aplikasi kalkulator yang mampu menyelesaikan perhitungan eksponen dan logaritma dengan cepat, tepat dan akurat, serta gratis akses bagi siapapun karena aplikasi ini bisa diakses juga melalui website: ''',
+                        TextSpan(
+                          text: dt.textDescript,
                           //
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                         TextSpan(
                           text: 'https://kalkulator-uas.web.app"',
@@ -103,15 +91,6 @@ PROGRAM STUDI S1 INFORMATIKA\n FAKULTAS TEKNIK\n UNIVERSITAS SILIWANGI\n 2022'''
                   ),
                 ],
               ),
-              // child: ListView(
-              //   children: const [
-
-              //     Text(
-              //       '''     "Sama seperti konsep matematika lainnya, dalam melakukan perhitungan eksponen & logaritma kita membutuhkan waktu dan latihan bahkan ketika kita kurang teliti maka akan timbul kesalahan. Disini kami telah mengembangkan kalkulator yang mampu menyelesaikan perhitungan eksponen dan logaritma dengan cepat, tepat dan akurat, serta gratis untuk digunakan siapa saja karena untuk mengaksesnya cukup mengakses . Kalkulator logaritma natural membantu Anda menemukan log dari angka yang berbeda." ''',
-              //       textAlign: TextAlign.justify,
-              //     ),
-              //   ],
-              // ),
             ),
           ),
         ],

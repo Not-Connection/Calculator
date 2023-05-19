@@ -17,9 +17,12 @@ class CalculatorHistory extends StatelessWidget {
         margin: const EdgeInsets.all(5),
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-            color: Colors.black,
-            border: Border.all(color: Colors.deepOrangeAccent),
-            borderRadius: const BorderRadius.all(Radius.circular(20))),
+          color: Colors.black,
+          border: Border.all(color: Colors.deepOrangeAccent),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(20),
+          ),
+        ),
         child: Column(
           children: [
             Container(
@@ -29,7 +32,7 @@ class CalculatorHistory extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  sizeWidth < 1000
+                  sizeWidth < 750
                       ? IconButton(
                           onPressed: () {
                             Scaffold.of(context).closeEndDrawer();
@@ -93,19 +96,22 @@ class CalculatorHistory extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: OnReactive(
-                () => Container(
+              child: OnBuilder.data(
+                listenTo: dt.rxHistories,
+                builder: (data) => Container(
                   // color: Colors.black,
-                  child: dt.rxHistories.st.values.isEmpty
+                  child: data.values.isEmpty
                       ? const Center(
                           child: Text('History is empty'),
                         )
                       : ListView(
                           children: [
-                            for (var i in dt.rxHistories.st.values)
+                            for (var i in data.values)
                               Card(
                                 child: ListTile(
                                   title: Text('${i.valX} ${i.valOps} ${i.valY} = ${i.valResult}'),
+                                  selected: i.id == dt.rxSelectedId.st,
+                                  onTap: () => ct.select(i.id),
                                 ),
                               ),
                           ],

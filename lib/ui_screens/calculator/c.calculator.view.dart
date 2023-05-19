@@ -25,33 +25,45 @@ class CalculatorView extends StatelessWidget {
           child: dt.isHistory.st == true ? const CalculatorHistory() : const CalculatorDescript(),
         ),
       ),
-      body: sizeWidth < 1000
+      body: sizeWidth < 750
           ? const CalculatorLayout()
-          : Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                // SizedBoxW(20),
-                Expanded(
-                  child: Container(
-                    width: 100,
-                    color: Colors.black,
-                    child: const CalculatorDescript(),
-                  ),
+          : sizeWidth < 1000
+              ? Row(
+                  children: [
+                    const CalculatorLayout(),
+                    const SizedBoxW(5),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        color: Colors.black,
+                        child: const CalculatorHistory(),
+                      ),
+                    ),
+                  ],
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    // SizedBoxW(20),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        color: Colors.black,
+                        child: const CalculatorDescript(),
+                      ),
+                    ),
+                    const SizedBoxW(5),
+                    const CalculatorLayout(),
+                    const SizedBoxW(5),
+                    Expanded(
+                      child: Container(
+                        width: 100,
+                        color: Colors.black,
+                        child: const CalculatorHistory(),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBoxW(5),
-                const CalculatorLayout(),
-                const SizedBoxW(5),
-                Expanded(
-                  child: Container(
-                    width: 100,
-                    color: Colors.black,
-                    child: const CalculatorHistory(),
-                  ),
-                ),
-                // SizedBoxW(20),
-                // CalculatorHistoryDrawer(),
-              ],
-            ),
     );
   }
 }

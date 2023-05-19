@@ -10,14 +10,18 @@ class CalculatorAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     final sizeWidth = MediaQuery.of(context).size.width;
     return AppBar(
-      title: const Text(
-        'CALCULATOR',
-        style: TextStyle(wordSpacing: 20),
-      ),
+      // ti
+      centerTitle: true,
       // toolbarHeight: 67,
       backgroundColor: Colors.black,
-      // title: OnReactive(() => Text(dt.rxTitle.st)),
+      title: OnReactive(
+        () => Text(
+          dt.rxTitle.st,
+          style: const TextStyle(wordSpacing: 20),
+        ),
+      ),
       actions: [
+        Text('$sizeWidth'),
         sizeWidth < 1000
             ? IconButton(
                 tooltip: 'Description',

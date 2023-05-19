@@ -1,13 +1,13 @@
 part of '_index.dart';
 
 class Histories {
-  List<History> values;
+  List<Value> values;
   Histories({
     this.values = const [],
   });
 
   Histories copyWith({
-    List<History>? values,
+    List<Value>? values,
   }) {
     return Histories(
       values: values ?? this.values,
@@ -24,7 +24,7 @@ class Histories {
 
   factory Histories.fromMap(Map<String, dynamic> map) {
     return Histories(
-      values: List<History>.from(map['values']?.map((x) => History.fromMap(x)) ?? const []),
+      values: List<Value>.from(map['values']?.map((x) => Value.fromMap(x)) ?? const []),
     );
   }
 

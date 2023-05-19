@@ -7,6 +7,10 @@ class CalculatorCtrl {
 
   action() => dt.rxInt.setState((s) => s + 1);
 
+  setValueByHistory() => Serv.history.setValueByHistory();
+
+  select(int id) => Serv.history.select(id);
+
   clear() {
     dt.rxValX.st = 0.0;
     dt.rxValOps.st = '';

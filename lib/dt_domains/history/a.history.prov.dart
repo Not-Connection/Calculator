@@ -1,39 +1,6 @@
 part of '_index.dart';
 
 class HistoryProv {
-  final rxHistories = RM.inject<Histories>(
-    () => Histories(),
-    persist: () => PersistState(
-      key: 'rxCobas',
-      throttleDelay: 400,
-      shouldRecreateTheState: false,
-      toJson: (s) => s.toJson(),
-      fromJson: (j) => Histories.fromJson(j),
-    ),
-  );
-
-  // final rxHistory = RM.inject<History>(
-  //   () => History(),
-  //   persist: () => PersistState(
-  //     key: 'rxHistory',
-  //     throttleDelay: 400,
-  //     shouldRecreateTheState: false,
-  //     toJson: (s) => s.toJson(),
-  //     fromJson: (j) => History.fromJson(j),
-  //   ),
-  // );
-
-  // final rxHistoryList = RM.inject<Histories>(
-  //   () => Histories(),
-  //   persist: () => PersistState(
-  //     key: 'rxHistoryList',
-  //     throttleDelay: 400,
-  //     shouldRecreateTheState: false,
-  //     toJson: (s) => s.toJson(),
-  //     fromJson: (j) => Histories.fromJson(j),
-  //   ),
-  // );
-
   final rxValX = RM.inject<double>(() => 0.0);
 
   final rxValOps = RM.inject<String>(() => '');
@@ -44,5 +11,29 @@ class HistoryProv {
 
   final rxValResult = RM.inject<String>(() => '0');
 
-  var rxIsInit = RM.inject<bool>(() => true);
+  final rxIsInit = RM.inject<bool>(() => true);
+
+  final rxSelectedId = RM.inject<int>(
+    () => 0,
+    sideEffects: SideEffects(
+      onSetState: (snap) {
+        if (snap.hasData) {
+          Serv.history.setValueByHistory();
+        }
+      },
+    ),
+  );
+
+  final rxValue = RM.inject<Value>(() => Value());
+
+  final rxHistories = RM.inject<Histories>(
+    () => Histories(),
+    persist: () => PersistState(
+      key: 'rxCobas',
+      throttleDelay: 400,
+      shouldRecreateTheState: false,
+      toJson: (s) => s.toJson(),
+      fromJson: (j) => Histories.fromJson(j),
+    ),
+  );
 }

@@ -16,7 +16,7 @@ class CalculatorScreens extends StatelessWidget {
         width: double.infinity,
         child: Column(
           children: [
-            sizeWidth < 1000 ? const CalculatorHistoryButton() : const SizedBox.shrink(),
+            sizeWidth < 750 ? const CalculatorHistoryButton() : const SizedBox.shrink(),
             const CalculatorBufferScreen(),
             const Divider(color: Colors.white30),
             const CalculatorResultScreen(),
