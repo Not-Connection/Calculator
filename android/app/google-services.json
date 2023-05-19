@@ -1,40 +1,76 @@
 {
   "project_info": {
-    "project_number": "615709146253",
-    "project_id": "kalkulator-uas",
-    "storage_bucket": "kalkulator-uas.appspot.com"
+    "project_number": "955602734381",
+    "project_id": "expolog-calc",
+    "storage_bucket": "expolog-calc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:615709146253:android:599b30b9bcad05aa6ef6c4",
+        "mobilesdk_app_id": "1:955602734381:android:978889ac176bac9caa97a4",
         "android_client_info": {
-          "package_name": "com.example.kalkulator_uas"
+          "package_name": "com.example.expolog_calc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "615709146253-pjak7bg63caag80kkd033j0ltspgs2dd.apps.googleusercontent.com",
+          "client_id": "955602734381-gi4hcregmog22g0agabo2l4u61v1ibrp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBJ10dHdmFOyQGA6mKhQb9-yfmambZkUJI"
+          "current_key": "AIzaSyCkpw2YG_2wUBfKkSkkgKLCBLjWH1hK5X4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "615709146253-pjak7bg63caag80kkd033j0ltspgs2dd.apps.googleusercontent.com",
+              "client_id": "955602734381-gi4hcregmog22g0agabo2l4u61v1ibrp.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "615709146253-dariklct96h32cchfjre0dslnhdflm3i.apps.googleusercontent.com",
+              "client_id": "955602734381-3laoo845h4t736p62q08veqshct6em22.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.kalkulatorUas"
+                "bundle_id": "com.example.expologCalc"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955602734381:android:f59c5f76781b5f18aa97a4",
+        "android_client_info": {
+          "package_name": "com.nostracode.calculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955602734381-gi4hcregmog22g0agabo2l4u61v1ibrp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkpw2YG_2wUBfKkSkkgKLCBLjWH1hK5X4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955602734381-gi4hcregmog22g0agabo2l4u61v1ibrp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "955602734381-3laoo845h4t736p62q08veqshct6em22.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.expologCalc"
               }
             }
           ]

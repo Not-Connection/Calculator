@@ -92,7 +92,7 @@ PROGRAM STUDI S1 INFORMATIKA\n FAKULTAS TEKNIK\n UNIVERSITAS SILIWANGI\n 2022'''
                         ),
                         TextSpan(
                           text: 'https://kalkulator-uas.web.app"',
-                          // style: const TextStyle(color: Colors.deepOrangeAccent),
+                          style: const TextStyle(color: Colors.white),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               // html.window.open('https://kalkulator-uas.web.app/', 'new tab');

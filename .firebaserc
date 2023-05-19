@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "expolog-calc"
+  },
+  "targets": {
+    "expolog-calc": {
+      "hosting": {
+        "expolog": [
+          "expolog-calc"
+        ],
+        "indah-annisa": [
+          "indah-annisa"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

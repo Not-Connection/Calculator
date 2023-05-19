@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCp48yT9A5QkBthM2OOkiSVfwEtodsG-kA',
-    appId: '1:615709146253:web:a2dc9459d58ea30f6ef6c4',
-    messagingSenderId: '615709146253',
-    projectId: 'kalkulator-uas',
-    authDomain: 'kalkulator-uas.firebaseapp.com',
-    storageBucket: 'kalkulator-uas.appspot.com',
-    measurementId: 'G-W3DBNJMTZH',
+    apiKey: 'AIzaSyD65iGcDtE9Xit7NzSG7Q1Gkv3gfcyQbYE',
+    appId: '1:955602734381:web:16d0b9c8837ed51faa97a4',
+    messagingSenderId: '955602734381',
+    projectId: 'expolog-calc',
+    authDomain: 'expolog-calc.firebaseapp.com',
+    storageBucket: 'expolog-calc.appspot.com',
+    measurementId: 'G-NJV41727Z8',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBJ10dHdmFOyQGA6mKhQb9-yfmambZkUJI',
-    appId: '1:615709146253:android:599b30b9bcad05aa6ef6c4',
-    messagingSenderId: '615709146253',
-    projectId: 'kalkulator-uas',
-    storageBucket: 'kalkulator-uas.appspot.com',
+    apiKey: 'AIzaSyCkpw2YG_2wUBfKkSkkgKLCBLjWH1hK5X4',
+    appId: '1:955602734381:android:f59c5f76781b5f18aa97a4',
+    messagingSenderId: '955602734381',
+    projectId: 'expolog-calc',
+    storageBucket: 'expolog-calc.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAK0rAVShRHNJ0rE78eiagp-wIMMclUf60',
-    appId: '1:615709146253:ios:067c597fe3c863fc6ef6c4',
-    messagingSenderId: '615709146253',
-    projectId: 'kalkulator-uas',
-    storageBucket: 'kalkulator-uas.appspot.com',
-    iosClientId: '615709146253-dariklct96h32cchfjre0dslnhdflm3i.apps.googleusercontent.com',
-    iosBundleId: 'com.example.kalkulatorUas',
+    apiKey: 'AIzaSyA5mzWAneiu5h3FLYVf5a3FI0DM4qio66I',
+    appId: '1:955602734381:ios:d0b06a4422bc009baa97a4',
+    messagingSenderId: '955602734381',
+    projectId: 'expolog-calc',
+    storageBucket: 'expolog-calc.appspot.com',
+    iosClientId: '955602734381-thqomf07b04p13hktihp9pqc08kjgjqo.apps.googleusercontent.com',
+    iosBundleId: 'com.nostracode.calculator',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAK0rAVShRHNJ0rE78eiagp-wIMMclUf60',
-    appId: '1:615709146253:ios:067c597fe3c863fc6ef6c4',
-    messagingSenderId: '615709146253',
-    projectId: 'kalkulator-uas',
-    storageBucket: 'kalkulator-uas.appspot.com',
-    iosClientId: '615709146253-dariklct96h32cchfjre0dslnhdflm3i.apps.googleusercontent.com',
-    iosBundleId: 'com.example.kalkulatorUas',
+    apiKey: 'AIzaSyA5mzWAneiu5h3FLYVf5a3FI0DM4qio66I',
+    appId: '1:955602734381:ios:55c6ec0d28a10673aa97a4',
+    messagingSenderId: '955602734381',
+    projectId: 'expolog-calc',
+    storageBucket: 'expolog-calc.appspot.com',
+    iosClientId: '955602734381-t0vao47bicne7kr4c85adathnibbqqs1.apps.googleusercontent.com',
+    iosBundleId: 'com.example.newCalculator.RunnerTests',
   );
 }
