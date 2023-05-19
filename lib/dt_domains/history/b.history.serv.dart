@@ -7,7 +7,7 @@ class HistoryServ {
   addToHistories() {
     pv.rxHistories.setState(
       (s) => Histories(values: [
-        Value(
+        History(
           id: Random().nextInt(9999),
           valX: pv.rxValX.st,
           valOps: pv.rxValOps.st,
@@ -19,7 +19,7 @@ class HistoryServ {
     );
   }
 
-  Value getValueByHistory() {
+  History getValueByHistory() {
     final index = pv.rxHistories.st.values.indexWhere((element) => element.id == pv.rxSelectedId.st);
     return pv.rxHistories.st.values[index];
   }

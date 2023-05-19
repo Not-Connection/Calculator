@@ -1,13 +1,13 @@
 part of '_index.dart';
 
-class Value {
+class History {
   int id;
   double valX;
   String valOps;
   double valY;
   String valScreen;
   String valResult;
-  Value({
+  History({
     this.id = 0,
     this.valX = 0.0,
     this.valOps = '',
@@ -16,7 +16,7 @@ class Value {
     this.valResult = '',
   });
 
-  Value copyWith({
+  History copyWith({
     int? id,
     double? valX,
     String? valOps,
@@ -24,7 +24,7 @@ class Value {
     String? valScreen,
     String? valResult,
   }) {
-    return Value(
+    return History(
       id: id ?? this.id,
       valX: valX ?? this.valX,
       valOps: valOps ?? this.valOps,
@@ -47,8 +47,8 @@ class Value {
     return result;
   }
 
-  factory Value.fromMap(Map<String, dynamic> map) {
-    return Value(
+  factory History.fromMap(Map<String, dynamic> map) {
+    return History(
       id: map['id']?.toInt() ?? 0,
       valX: map['val_x']?.toDouble() ?? 0.0,
       valOps: map['val_ops'] ?? '',
@@ -60,7 +60,7 @@ class Value {
 
   String toJson() => json.encode(toMap());
 
-  factory Value.fromJson(String source) => Value.fromMap(json.decode(source));
+  factory History.fromJson(String source) => History.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -71,7 +71,7 @@ class Value {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Value &&
+    return other is History &&
         other.id == id &&
         other.valX == valX &&
         other.valOps == valOps &&

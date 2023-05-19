@@ -9,8 +9,6 @@ class CalculatorData {
 
   final rxSelectedId = Prov.history.st.rxSelectedId;
 
-  final rxValue = Prov.history.st.rxValue;
-
   final rxValX = Prov.history.st.rxValX;
 
   final rxValOps = Prov.history.st.rxValOps;

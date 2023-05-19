@@ -24,8 +24,6 @@ class HistoryProv {
     ),
   );
 
-  final rxValue = RM.inject<Value>(() => Value());
-
   final rxHistories = RM.inject<Histories>(
     () => Histories(),
     persist: () => PersistState(
