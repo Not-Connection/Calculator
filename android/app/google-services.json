@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "615709146253",
+    "project_id": "kalkulator-uas",
+    "storage_bucket": "kalkulator-uas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615709146253:android:599b30b9bcad05aa6ef6c4",
+        "android_client_info": {
+          "package_name": "com.example.kalkulator_uas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615709146253-pjak7bg63caag80kkd033j0ltspgs2dd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ10dHdmFOyQGA6mKhQb9-yfmambZkUJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615709146253-pjak7bg63caag80kkd033j0ltspgs2dd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "615709146253-dariklct96h32cchfjre0dslnhdflm3i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kalkulatorUas"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
