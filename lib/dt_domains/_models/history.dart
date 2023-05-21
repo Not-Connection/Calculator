@@ -2,25 +2,25 @@ part of '_index.dart';
 
 class History {
   int id;
-  double valX;
+  String valX;
   String valOps;
-  double valY;
+  String valY;
   String valScreen;
   String valResult;
   History({
     this.id = 0,
-    this.valX = 0.0,
+    this.valX = '',
     this.valOps = '',
-    this.valY = 0.0,
+    this.valY = '',
     this.valScreen = '',
     this.valResult = '',
   });
 
   History copyWith({
     int? id,
-    double? valX,
+    String? valX,
     String? valOps,
-    double? valY,
+    String? valY,
     String? valScreen,
     String? valResult,
   }) {
@@ -50,9 +50,9 @@ class History {
   factory History.fromMap(Map<String, dynamic> map) {
     return History(
       id: map['id']?.toInt() ?? 0,
-      valX: map['val_x']?.toDouble() ?? 0.0,
+      valX: map['val_x'] ?? '',
       valOps: map['val_ops'] ?? '',
-      valY: map['val_y']?.toDouble() ?? 0.0,
+      valY: map['val_y'] ?? '',
       valScreen: map['val_screen'] ?? '',
       valResult: map['val_result'] ?? '',
     );
@@ -64,7 +64,7 @@ class History {
 
   @override
   String toString() {
-    return 'Value(id: $id, valX: $valX, valOps: $valOps, valY: $valY, valScreen: $valScreen, valResult: $valResult)';
+    return 'History(id: $id, valX: $valX, valOps: $valOps, valY: $valY, valScreen: $valScreen, valResult: $valResult)';
   }
 
   @override

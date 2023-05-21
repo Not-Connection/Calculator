@@ -1,3 +1,3 @@
-export 'calculator/_index.dart';
-
-export 'layout/_index.dart';
+export 'a.splash/_index.dart';
+export 'b.landing/_index.dart';
+export 'c.calculator/_index.dart';

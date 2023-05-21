@@ -33,7 +33,7 @@ class Histories {
   factory Histories.fromJson(String source) => Histories.fromMap(json.decode(source));
 
   @override
-  String toString() => 'Cobas(values: $values)';
+  String toString() => 'Histories(values: $values)';
 
   @override
   bool operator ==(Object other) {
