@@ -7,17 +7,17 @@ class LandingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final sizeWidth = MediaQuery.of(context).size.width;
+
     return Flexible(
-      child: Container(
-        margin: const EdgeInsets.all(8),
+      child: SizedBox(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
               Container(
                 width: double.infinity,
-                height: 400,
+                height: sizeWidth <= 1000 ? 450 : 400,
                 color: Colors.black,
                 child: Center(
                   child: Container(
@@ -28,8 +28,8 @@ class LandingContent extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
-              const LandingSupportedText(),
+              // const SizedBox(height: 10),
+              // const LandingSupportedText(),
             ],
           ),
         ),

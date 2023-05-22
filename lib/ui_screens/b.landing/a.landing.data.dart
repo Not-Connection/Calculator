@@ -11,7 +11,7 @@ class LandingData {
 
   final indahImage = 'assets/images/indah_out.jpg';
 
-  final flutterLogoDark = 'assets/images/flutter-logo.webp';
+  final flutterLogoDark = 'assets/images/flutterlogo.png';
 
   final mathImage = 'assets/images/math3.jpg';
 

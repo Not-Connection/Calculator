@@ -11,18 +11,23 @@ class LandingSupportedText extends StatelessWidget {
 
     return Visibility(
       visible: sizeWidth <= 1000,
-      child: const Column(
-        children: [
-          Text('Powered by :'),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+      child: Center(
+        child: Container(
+          color: Colors.black,
+          child: const Column(
             children: [
-              FlutterLogo(),
-              Text('Flutter'),
+              Text('Powered by :'),
+              SizedBox(height: 5),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FlutterLogo(),
+                  Text('Flutter'),
+                ],
+              ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }

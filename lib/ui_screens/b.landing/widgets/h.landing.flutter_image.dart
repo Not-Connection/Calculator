@@ -12,14 +12,17 @@ class LandingFlutterImage extends StatelessWidget {
   Widget build(BuildContext context) {
     final sizeWidth = MediaQuery.of(context).size.width;
     return Positioned(
-      right: -150,
-      bottom: -100,
+      right: -100,
+      bottom: -50,
       child: Visibility(
         visible: MediaQuery.of(context).size.width <= 1000 ? false : true,
-        child: SizedBox(
-          width: sizeWidth >= 1300 ? 500 : 400,
-          height: sizeWidth >= 1300 ? 500 : 400,
-          child: Image.asset(dt.flutterLogoDark),
+        child: Opacity(
+          opacity: 0.3,
+          child: SizedBox(
+            width: sizeWidth >= 1300 ? 500 : 400,
+            height: sizeWidth >= 1300 ? 500 : 400,
+            child: Image.asset(dt.flutterLogoDark),
+          ),
         ),
       ),
     );
